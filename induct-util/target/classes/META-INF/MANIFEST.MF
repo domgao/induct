@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: induct-util
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: ggh
+Implementation-Vendor-Id: com.domgao
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/induct/induct-util
+Created-By: Maven Integration for Eclipse
+
