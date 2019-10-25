@@ -2,7 +2,9 @@ package com.domgao.util.date;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * 日期工具类
@@ -62,5 +64,42 @@ public class DateUtil {
 		String dateStr = localDateTime.format(formatter);
 		return dateStr;
 	}
+	
+	/**
+	 * localDate转Date
+	 * @param localDate
+	 * @return
+	 */
+	public static Date localDateToDate(LocalDate localDate){
+		return Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+	}
+	
+	/**
+	 * localDateTime转Date
+	 * @param localDateTime
+	 * @return
+	 */
+	public static Date localDateTimeToDate(LocalDateTime localDateTime){
+		return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+	}
+	
+	/**
+	 * date转LocalDateTime
+	 * @param date
+	 * @return
+	 */
+	public static LocalDateTime dateToLocalDateTime(Date date){
+		return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+	}
+	
+	/**
+	 * date转LocalDate
+	 * @param date
+	 * @return
+	 */
+	public static LocalDate dateToLocalDate(Date date){
+		return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+	}
+	
 	
 }
