@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.domgao</groupId>
-	<artifactId>induct</artifactId>
+	<artifactId>induct-parent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>induct-parent</name>
